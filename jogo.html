@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="estilos/estilo.css">
+
+	<script src="js/jogo.js"></script>
+	
+</head>
+<body onresize="ajustarTamanhoTela()">
+
+	<div class="painel">
+		<div class="vidas">
+			<img src="imagens/coracao_cheio.png" id="vida1">
+			<img src="imagens/coracao_cheio.png" id="vida2">
+			<img src="imagens/coracao_cheio.png" id="vida3">
+		</div>
+
+		<div class="cronometro">
+			Tempo restante:
+			<span id="cronometro"></span>
+		</div>
+	</div>
+
+
+<script>
+
+	document.getElementById('cronometro').innerHTML = tempo;
+	var criarMosca = setInterval(function(){
+		posicaoRandomica()
+	}, nivel);
+</script>
+</body>
+</html>
